@@ -8,6 +8,7 @@ license = "UNLICENSE"
 [tool.poetry.dependencies]
 python = "^3.9"
 "discord.py" = "^1.6.0"
+steward = "^0.0.4"
 
 [tool.poetry.dev-dependencies]
 

@@ -79,6 +79,14 @@ optional = false
 python-versions = ">=3.6"
 
 [[package]]
+name = "steward"
+version = "0.0.4"
+description = "Library for easy converting between plain JSON-like data and compound structure of user defined class instances."
+category = "main"
+optional = false
+python-versions = "*"
+
+[[package]]
 name = "typing-extensions"
 version = "3.7.4.3"
 description = "Backported and Experimental Type Hints for Python 3.5+"
@@ -101,7 +109,7 @@ multidict = ">=4.0"
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.9"
-content-hash = "47a7313d4150930d086029f9276b8fcf8024628b148ef2a1a1c32b9419bc68ed"
+content-hash = "edb5fc072f263e08531915b4a2719447fcb41488a37013f9b1f428e8120b0f44"
 
 [metadata.files]
 aiohttp = [
@@ -201,6 +209,9 @@ multidict = [
     {file = "multidict-5.1.0-cp39-cp39-win32.whl", hash = "sha256:fc13a9524bc18b6fb6e0dbec3533ba0496bbed167c56d0aabefd965584557d80"},
     {file = "multidict-5.1.0-cp39-cp39-win_amd64.whl", hash = "sha256:7df80d07818b385f3129180369079bd6934cf70469f99daaebfac89dca288359"},
     {file = "multidict-5.1.0.tar.gz", hash = "sha256:25b4e5f22d3a37ddf3effc0710ba692cfc792c2b9edfb9c05aefe823256e84d5"},
+]
+steward = [
+    {file = "steward-0.0.4.tar.gz", hash = "sha256:3e1e61cd297f68fec40104532e2b78b9a4d76a540dffe9938ae763b369da3429"},
 ]
 typing-extensions = [
     {file = "typing_extensions-3.7.4.3-py2-none-any.whl", hash = "sha256:dafc7639cde7f1b6e1acc0f457842a83e722ccca8eef5270af2d74792619a89f"},

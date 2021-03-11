@@ -3,7 +3,7 @@
 
 from discord.ext import commands
 import discord
-import config
+import steward_discord.config as config
 
 class Bot(commands.Bot):
     def __init__(self, **kwargs):
@@ -23,3 +23,4 @@ bot = Bot()
 # write general commands here
 
 bot.run(config.token)
+
