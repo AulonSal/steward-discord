@@ -1,5 +1,5 @@
 # Secrets
-steward/secrets.py
+steward_discord/secrets.py
 
 # Development Environment
 .vim
