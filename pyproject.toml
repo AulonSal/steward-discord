@@ -9,8 +9,11 @@ license = "UNLICENSE"
 python = "^3.9"
 "discord.py" = "^1.6.0"
 steward = "^0.0.4"
+httpx = "^0.17.1"
+httpx-auth = "^0.9.0"
 
 [tool.poetry.dev-dependencies]
+isort = "^5.8.0"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
