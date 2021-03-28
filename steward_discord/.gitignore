@@ -24,5 +24,3 @@ var/
 .installed.cfg
 *.egg
 
-# Our configuration files
-config.py
