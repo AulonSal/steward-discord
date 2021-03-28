@@ -1,9 +1,11 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
-from discord.ext import commands
 import discord
+from discord.ext import commands
+
 import steward_discord.config as config
+
 
 class Bot(commands.Bot):
     def __init__(self, **kwargs):

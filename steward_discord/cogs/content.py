@@ -1,17 +1,16 @@
 from __future__ import annotations
 
 from itertools import chain
+from pprint import pprint
 from typing import Optional, Union
-import validators
 
 import discord
 import httpx
-
+import validators
 from discord.ext import commands
-from steward_discord.config import PASSWORD, STEWARD_URL, USERNAME
 from httpx_auth import OAuth2ResourceOwnerPasswordCredentials
-from pprint import pprint
 
+from steward_discord.config import PASSWORD, STEWARD_URL, USERNAME
 
 THUMBSUP_EMOJI = '👍'
 
