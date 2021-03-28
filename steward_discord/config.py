@@ -1,4 +1,4 @@
-from .secrets import PASSWORD, USERNAME, token
+from .secrets import PASSWORD, USERNAME, token STEWARD_URL
 
 cogs: list[str] = []
 
@@ -8,4 +8,3 @@ primary_cogs: list[str] = [
 
 cogs.extend(['cogs.' + cog for cog in primary_cogs])
 
-STEWARD_URL = 'https://steward.aulonsal.com'
