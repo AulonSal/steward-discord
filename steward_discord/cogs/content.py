@@ -94,13 +94,18 @@ class ParseContentHistory(commands.Cog):
     
         contents = []
         for url in urls:
-            embedded_description = []
+            embedded_descriptions = []
             for index, embed in enumerate(embeds.copy()):
                 if embed.url == url:
-                    embedded_description.append(embeds.pop(index).description)
+                    embeds.pop(index)
+                    # TODO: Figure out if I want to always include titles
+                    embedded_description: Optional[str] = embed.description if embed.description else embed.title if embed.title else None
+                    if embedded_description:
+                        embedded_descriptions.append(embedded_description)
                     break
 
-            meta = ' \n::\n '.join(chain(description, embedded_description))
+            meta = ' \n::\n '.join(chain(description, embedded_descriptions))
+            print(meta)
 
             contents.append(dict(
                 meta=meta,
