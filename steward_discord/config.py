@@ -1,4 +1,4 @@
-from .secrets import PASSWORD, USERNAME, token STEWARD_URL
+from .secrets import PASSWORD, USERNAME, token, STEWARD_URL
 
 cogs: list[str] = []
 
