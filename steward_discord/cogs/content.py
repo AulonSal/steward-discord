@@ -66,6 +66,21 @@ class ParseContentHistory(commands.Cog):
                 # Mark message as parsed
                 await message.add_reaction(THUMBSUP_EMOJI)
 
+    @commands.command(name='clean-reactions')
+    @commands.is_owner()
+    async def clean_reactions(self, ctx, channel_name: str):
+        if channel_name not in ParseContentHistory.types:
+            raise ValueError(f'Channel not one of {str(ParseContentHistory.types)}')
+
+        channel: Optional[discord.TextChannel] = discord.utils.get(ctx.guild.text_channels, name=channel_name)
+        if channel is None:
+            raise ValueError(f'Channel #{channel_name} not Found')
+
+        async for message in channel.history():
+            message: discord.Message
+            await message.clear_reactions()
+
+
     # TODO: Generate pydantic models and then use them from a library
     @staticmethod
     def parse_message(message: discord.Message) -> list[dict]:
