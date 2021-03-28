@@ -113,6 +113,7 @@ class ParseContentHistory(commands.Cog):
 
     @staticmethod
     async def last_parsed_message(channel: discord.TextChannel) -> Optional[discord.Message]:
+        # Based on https://www.python.org/dev/peps/pep-0492/#example-1
         message_iterator = channel.history().__aiter__()
         while True:
             try:
