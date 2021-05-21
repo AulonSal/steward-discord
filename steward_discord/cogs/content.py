@@ -60,7 +60,8 @@ class ParseContentHistory(commands.Cog):
                 contents = self.parse_message(message)
 
                 for content in contents:
-                    result = await client.post(STEWARD_URL, json=content, auth=request_auth)
+                    result = await client.post(STEWARD_URL + "/content", json=content, auth=request_auth)
+                    # TODO: Check the result and log it
                     print(result)
 
                 # Mark message as parsed
